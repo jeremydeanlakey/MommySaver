@@ -23,7 +23,7 @@ public class StarToy extends Toy {
         defaultColor = Color.WHITE;
         currentColor = Color.WHITE;
 
-        radius = 1 / 10.0f;
+        radius = 1 / 6.0f;
 
         angle = (float) (random.nextFloat() * 2 * Math.PI);
         position = random.nextFloat() * MAX_DISTANCE;

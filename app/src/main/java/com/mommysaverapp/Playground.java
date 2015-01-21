@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.mommysaverapp.game.CheckersGame;
 import com.mommysaverapp.game.CirclesGame;
+import com.mommysaverapp.game.FireworkGame;
 import com.mommysaverapp.game.Game;
 import com.mommysaverapp.game.LasersAndRainGame;
 import com.mommysaverapp.game.SpaceGame;
@@ -48,19 +49,17 @@ public class Playground extends View{
         invalidate();
     }
 
+
     void changeGame(){
         int nextGame;
-        /*
+
         do{
-            nextGame = gameSelector.nextInt(4);
+            nextGame = gameSelector.nextInt(7);
         } while (nextGame == lastGame);
-        */
-        nextGame = 0;
+
         switch (nextGame){
             case 0:
-//                game = new StripesGame();
-//                game = new LasersAndRainGame(true);
-                game = new SpaceGame();
+                game = new FireworkGame();
                 countdownToGameChange = 500;
                 break;
             case 1:
@@ -69,6 +68,18 @@ public class Playground extends View{
                 break;
             case 2:
                 game = new CheckersGame();
+                countdownToGameChange = 500;
+                break;
+            case 3:
+                game = new StripesGame();
+                countdownToGameChange = 500;
+                break;
+            case 4:
+                game = new LasersAndRainGame(true);
+                countdownToGameChange = 400;
+                break;
+            case 5:
+                game = new SpaceGame();
                 countdownToGameChange = 500;
                 break;
             default:
