@@ -59,7 +59,7 @@ public class SmileyToy extends Toy {
         } while (xFinish < 0 || xFinish >= numberSpaces || yFinish < 0 || yFinish >= numberSpaces);
     }
 
-    public void move(){
+    private void move(){
         if (progress != 0.0f || !hider || everybodyRun){
             progress += 0.015f;
             if (progress >= 1.0f) progress = 0.0f;
@@ -70,6 +70,7 @@ public class SmileyToy extends Toy {
         y = (progress * yFinish + (1-progress) * yStart + 0.5f) / numberSpaces;
     }
 
+    @Override
     public void draw(Canvas canvas){
         move();
         int w = canvas.getWidth();
@@ -96,6 +97,7 @@ public class SmileyToy extends Toy {
         canvas.drawCircle(x*w+r*3/8, y*h-r*3/8, r*3/16, altPaint);
     }
 
+    @Override
    public void onTouch(float touchX, float touchY, int w, int h){
         /*
         int scale = Math.min(h,w);

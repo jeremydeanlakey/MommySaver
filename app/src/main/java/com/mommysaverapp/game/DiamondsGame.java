@@ -16,12 +16,9 @@ import android.view.View;
  * Created by jeremy on 1/21/14.
  */
 
-/**
- * Created by jeremy on 1/21/14.
- */
 public class DiamondsGame extends Game {
 
-    float progress ;
+    private float progress ;
 
     public DiamondsGame(){
         progress = 0;
@@ -49,7 +46,6 @@ public class DiamondsGame extends Game {
         int h = canvas.getHeight();
         int stripeCount = 5 * 2;
         int stripeWidth = w * 2 / stripeCount;
-        //int segmentLength = canvas.getHeight();
         for (int i = 0; i < stripeCount; i++){
             // draw from segmentLength * (progress - 1), segmentWidth * (i-1)
             //      to segmentLength * progress, segmentWidth * (i+1)

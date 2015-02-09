@@ -20,11 +20,6 @@ public class MainActivity extends Activity implements MediaPlayer.OnPreparedList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // This requires extends ActionBarActivity instead of Activity
-//        if (Build.VERSION.SDK_INT >= 16) {
-//            ActionBar actionBar = getSupportActionBar();
-//            actionBar.hide();
-//        }
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         myPlayGround = new Playground(this);
         setContentView(myPlayGround);

@@ -30,11 +30,11 @@ public abstract class Game{
         }
     }
 
-    public void drawBackground(Canvas canvas){}
+    protected void drawBackground(Canvas canvas){}
 
-    public void drawForeground(Canvas canvas){}
+    protected void drawForeground(Canvas canvas){}
 
-    public void drawToys(Canvas canvas){
+    protected void drawToys(Canvas canvas){
         for (Toy t: toys){
             t.draw(canvas);
         }

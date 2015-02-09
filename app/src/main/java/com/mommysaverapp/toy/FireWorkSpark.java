@@ -30,7 +30,7 @@ public class FireWorkSpark {
         colorTimer = random.nextInt(COLOR_TIMER_MAX);
     }
 
-    public void changeColor(){
+    private void changeColor(){
         colorTimer = (colorTimer + 1) % COLOR_TIMER_MAX;
         if (colorTimer == COLOR_TIMER_MAX / 2){
             currentColor = COLORS[random.nextInt(4)];

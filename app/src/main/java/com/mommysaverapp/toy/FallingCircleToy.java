@@ -41,7 +41,7 @@ public class FallingCircleToy extends Toy {
 //        highlightColors.add(Color.YELLOW);
     }
 
-    public void move(){
+    private void move(){
         x += vX;
         y += vY;
 
@@ -59,7 +59,7 @@ public class FallingCircleToy extends Toy {
         accelerate();
     }
 
-    public void accelerate(){
+    private void accelerate(){
         vY += gravity;
     }
 

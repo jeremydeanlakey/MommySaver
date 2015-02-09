@@ -43,7 +43,7 @@ public class FireworkToy extends Toy {
         highlightColors.add(Color.YELLOW);
     }
 
-    public void move(){
+    private void move(){
         radius += growthRate;
         if (radius >= CRITICAL_RADIUS * 2){
             radius = 0;
@@ -54,7 +54,7 @@ public class FireworkToy extends Toy {
     }
 
     @Override
-    public void fadeColor(){
+    protected void fadeColor(){
         if (radius >= CRITICAL_RADIUS){
             colorTimer = 0;
             currentColor = defaultColor;
@@ -83,7 +83,7 @@ public class FireworkToy extends Toy {
         }
     }
 
-    public void pop(){
+    private void pop(){
         radius = Math.max(radius, CRITICAL_RADIUS);
     }
 

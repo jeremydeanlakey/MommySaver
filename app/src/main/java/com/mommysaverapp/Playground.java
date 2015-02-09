@@ -20,12 +20,12 @@ import java.util.Random;
  */
 public class Playground extends View{
 
-    Game game;
-    int countdownToGameChange;
-    int lastGame;
-    Random gameSelector;
+    private Game game;
+    private int countdownToGameChange;
+    private int lastGame;
+    private Random gameSelector;
 
-    Playground(Context context){
+    public Playground(Context context){
         super(context);
         gameSelector = new Random();
         lastGame = -1;
@@ -50,7 +50,7 @@ public class Playground extends View{
     }
 
 
-    void changeGame(){
+    private void changeGame(){
         int nextGame;
 
         do{

@@ -39,12 +39,12 @@ public class CircleToy extends Toy {
         highlightColors.add(Color.YELLOW);
     }
 
-    public void move(){
+    private void move(){
         offsetX += vX;
         offsetY += vY;
     }
 
-    public void accelerate(){
+    private void accelerate(){
         float denominator = (float) Math.sqrt((offsetX * offsetX) + (offsetY * offsetY));
         float g = 1.0f / 20 / 100;
         vX += - g * (offsetX / denominator);

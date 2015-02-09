@@ -36,7 +36,8 @@ public class CheckersGame extends Game {
         bgColor = Color.WHITE;
     }
 
-    public void drawBackground(Canvas canvas){
+    @Override
+    protected void drawBackground(Canvas canvas){
         int w = canvas.getWidth();
         int h = canvas.getHeight();
         Paint paint = new Paint();
@@ -45,7 +46,8 @@ public class CheckersGame extends Game {
         canvas.drawRect(0,0,w,h,paint);
     }
 
-    public void drawForeground(Canvas canvas){
+    @Override
+    protected void drawForeground(Canvas canvas){
         int row, col;
         int colWidth = canvas.getWidth() / width;
         int rowHeight = canvas.getHeight() / width;

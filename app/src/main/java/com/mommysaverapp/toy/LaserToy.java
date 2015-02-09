@@ -42,13 +42,7 @@ public class LaserToy extends Toy {
         highlightColors.add(Color.YELLOW);
     }
 
-    public void setBlack(){
-    }
-
-    public void setWhite(){
-    }
-
-    public void move(){
+    private void move(){
         x0 += speed;
         x1 += speed;
         if (x0 > 1){
@@ -81,6 +75,7 @@ public class LaserToy extends Toy {
         canvas.drawRect(x0int, y0int, x1int, y1int, paint);
     }
 
+    @Override
     public void onTouch(float touchX, float touchY, int w, int h){
         float y0 = this.y0 * h;
         float y1 = this.y1 * h;

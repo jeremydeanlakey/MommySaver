@@ -24,12 +24,12 @@ public class StripeToy extends Toy {
         highlightColors.add(Color.RED);
     }
 
-    public void setBlack(){
+    protected void setBlack(){
         defaultColor = Color.BLACK;
         currentColor = Color.BLACK;
     }
 
-    public void setWhite(){
+    protected void setWhite(){
         defaultColor = Color.WHITE;
         currentColor = Color.WHITE;
     }
@@ -47,6 +47,7 @@ public class StripeToy extends Toy {
         canvas.drawRect(0, y0int, w, y1int, paint);
     }
 
+    @Override
     public void onTouch(float touchX, float touchY, int w, int h){
         float y0 = this.y0 * h;
         float y1 = this.y1 * h;

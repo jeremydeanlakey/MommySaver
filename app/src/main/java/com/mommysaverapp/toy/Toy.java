@@ -29,7 +29,7 @@ public abstract class Toy {
         }
     }
 
-    public void highlight(){
+    protected void highlight(){
         if (highlightColors.isEmpty()) return;
         if (colorTimer > 1) return;
         currentColor = highlightColors.get(random.nextInt(highlightColors.size()));

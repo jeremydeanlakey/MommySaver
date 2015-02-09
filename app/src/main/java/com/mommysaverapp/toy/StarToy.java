@@ -15,9 +15,9 @@ public class StarToy extends Toy {
     private static float MAX_VELOCITY  = 1.0f / 75;
     private static float MAX_DISTANCE = 1.414f;
     private float radius;
-    float angle;
-    float position;
-    float velocity;
+    private float angle;
+    private float position;
+    private float velocity;
 
     public StarToy(){
         defaultColor = Color.WHITE;
@@ -36,11 +36,12 @@ public class StarToy extends Toy {
         highlightColors.add(Color.GREEN);
     }
 
-    public void move(){
+    private void move(){
         position += velocity;
         if (position >= MAX_DISTANCE) position = 0;
     }
 
+    @Override
     public void draw(Canvas canvas){
         fadeColor();
         move();
@@ -67,6 +68,7 @@ public class StarToy extends Toy {
         return relative + 0.5f;
     }
 
+    @Override
     public void onTouch(float touchX, float touchY, int w, int h){
         float xDistance = w * x() - touchX;
         float yDistance = h * y() - touchY;

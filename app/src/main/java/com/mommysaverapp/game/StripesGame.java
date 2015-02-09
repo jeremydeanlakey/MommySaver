@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class StripesGame extends Game {
 
     private int stripeColor;
-    float progress ;
+    private float progress ;
     private static final int numberOfStripes = 10;
     private static final float velocity = 0.05f;
 
@@ -35,7 +35,7 @@ public class StripesGame extends Game {
     }
 
     @Override
-    public void drawForeground(Canvas canvas){
+    protected void drawForeground(Canvas canvas){
         Rect r;
         int w = canvas.getWidth();
         int h = canvas.getHeight();

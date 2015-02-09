@@ -36,7 +36,7 @@ public class LasersAndRainGame extends Game {
     }
 
     @Override
-    public void drawBackground(Canvas canvas) {
+    protected void drawBackground(Canvas canvas) {
         Rect bg = new Rect();
         bg.set(0, 0, canvas.getWidth(), canvas.getHeight());
         Paint bgPaint = new Paint();
