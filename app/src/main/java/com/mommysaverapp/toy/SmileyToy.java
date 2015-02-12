@@ -99,16 +99,6 @@ public class SmileyToy extends Toy {
 
     @Override
    public void onTouch(float touchX, float touchY, int w, int h){
-        /*
-        int scale = Math.min(h,w);
-        float x = w * this.x;
-        float y = h * this.y;
-        float impactRadius = scale / 2.0f;
-        float distance = (float) Math.sqrt((x - touchX) * (x - touchX) + (y - touchY) * (y - touchY));
-        if (distance < impactRadius){
-            everybodyRun = true;
-        }
-        */
        everybodyRun = true;
     }
 
