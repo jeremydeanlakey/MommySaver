@@ -1,0 +1,13 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <rect fill="#FFFFFF" stroke="#666666" stroke-width="20" ry="30" rx="30" x="10" y="10" width="492" height="492" id="svg_1"/>
+  <!-- whitespace = (512-(20x2)-(90*2*2)) = 112 -->
+  <!-- x1 = 20 + (112/3=37.333) + 90 -->
+  <circle fill="#000000" stroke="#000000" stroke-width="5" cx="147" cy="147" r="90" id="svg_2"/>
+  <circle fill="#FFFF00" stroke="#FFFF00" stroke-width="5" cx="366" cy="147" r="90" id="svg_2"/>
+  <circle fill="#FF0000" stroke="#FF0000" stroke-width="5" cx="147" cy="366" r="90" id="svg_2"/>
+  <circle fill="#000000" stroke="#000000" stroke-width="5" cx="366" cy="366" r="90" id="svg_2"/>
+ </g>
+</svg>
