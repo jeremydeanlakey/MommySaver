@@ -1,0 +1,19 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/button_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <ImageView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:src="@drawable/music"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="musicButtonPressed"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dip"
+        />
+
+</RelativeLayout>

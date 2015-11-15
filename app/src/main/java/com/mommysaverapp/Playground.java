@@ -2,6 +2,7 @@ package com.mommysaverapp;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -24,6 +25,13 @@ public class Playground extends View{
     private int countdownToGameChange;
     private int lastGame;
     private Random gameSelector;
+
+    public Playground(Context context, AttributeSet attributeSet){
+        super(context);
+        gameSelector = new Random();
+        lastGame = -1;
+        changeGame();
+    }
 
     public Playground(Context context){
         super(context);
@@ -56,6 +64,7 @@ public class Playground extends View{
         do{
             nextGame = gameSelector.nextInt(7);
         } while (nextGame == lastGame);
+
 
         switch (nextGame){
             case 0:

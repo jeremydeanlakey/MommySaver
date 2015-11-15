@@ -6,24 +6,30 @@ import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 
-import com.mommysaverapp.Playground;
 
 public class MainActivity extends Activity implements MediaPlayer.OnPreparedListener {
 
     private Playground myPlayGround;
     private MediaPlayer mediaPlayer;
     private int songLocation;
+    private boolean muted = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        myPlayGround = new Playground(this);
-        setContentView(myPlayGround);
         songLocation = 0;
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setContentView(R.layout.activity_main);
+        ViewGroup main = (ViewGroup)findViewById(R.id.main_activity);
+        myPlayGround = new Playground(this);
+        main.addView(myPlayGround);
+        LayoutInflater.from(this).inflate(R.layout.button_bar, main);
         fullImmersiveMode();
     }
 
@@ -75,6 +81,8 @@ public class MainActivity extends Activity implements MediaPlayer.OnPreparedList
     }
 
     private void stopTheMusic(){
+        if (mediaPlayer == null)
+            return;
         songLocation = mediaPlayer.getCurrentPosition();
         mediaPlayer.stop();
         mediaPlayer.release();
@@ -89,7 +97,8 @@ public class MainActivity extends Activity implements MediaPlayer.OnPreparedList
     @Override
     protected void onResume(){
         super.onResume();
-        getThisPartyStarted();
+        if (!muted)
+            getThisPartyStarted();
     }
 
     @Override
@@ -101,6 +110,15 @@ public class MainActivity extends Activity implements MediaPlayer.OnPreparedList
     @Override
     protected void onStop(){
         super.onStop();
+    }
+
+    public void musicButtonPressed(View v) {
+
+        muted = !muted;
+        if (muted)
+            stopTheMusic();
+        else
+            getThisPartyStarted();
     }
 
 }
